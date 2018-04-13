@@ -1,0 +1,8 @@
+# Folder view configuration files
+.DS_Store
+*.iml
+target/
+out/
+.idea/
+ReadMe.txt
+
