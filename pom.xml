@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>x</groupId>
-    <artifactId>spring.mybatis</artifactId>
+    <artifactId>XSpring</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <name>spring.mybatisDemo</name>
+    <name>XSpring</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
