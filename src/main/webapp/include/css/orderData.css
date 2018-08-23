@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53"
+}
+
+#container, #container2, #container3, #container4 {
+    width: 550px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.barberDetail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: small;
+    padding: 25px 5px;
+    font-weight: bold;
+    color: #FF2B2B;
+}
+
+.monthBarberMoney {
+    text-align: center;
+    line-height: 40px;
+    border-top: 1px solid rgb(123, 123, 123);
+    border-bottom: 1px solid rgb(123, 123, 123);
+}
+
+.monthBarberMoney span {
+    display: inline-block;
+    border: 1px solid rgb(100, 149, 237);
+    border-radius: 4px;
+    height: 30px;
+    line-height: 34px;
+    background-color: cornflowerblue;
+    color: white;
+    width: 92px;
+    font-size: 13px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.blue-slide {
+    background: #4390EE;
+}
+
+.BarberMoneyDetails {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.88);
+    z-index: 2;
+    top: 0px;
+    display: none;
+}
+
+.slimScrollDiv {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    top: 50px;
+    width: 95% !important;
+    min-height: 300px;
+    max-height: 450px;
+    margin: 0 auto;
+}
+
+.DetailsContainer {
+    padding: 10px;
+}
+
+td div {
+    width: 95px;
+    word-wrap: break-word;
+}
+
+.MoneyDetails_foot {
+    position: relative;
+    top: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+#download {
+    margin: 0px 25px;
+}
+
+#allDetail {
+    background-color: #ECF0F5;
+    border: none;
+    color: #404040;
+}
+
+.form-group {
+    display: inline-block;
+    position: relative;
+}
+
+.input-group {
+    width: 300px;
+}
+
+.datepicker {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(0, 166, 90) !important;
+}
+
+.serach {
+    background-color: rgb(158, 158, 158);
+    margin-left: 30px;
+}
+
+th {
+    text-align: center !important;
+}
+
+.slimScrollDiv {
+    overflow-y: scroll !important;
+}

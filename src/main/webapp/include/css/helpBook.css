@@ -1,0 +1,507 @@
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53"
+}
+
+.dynamic_static {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(236, 240, 245) !important;
+    z-index: 2;
+    top: 0px;
+}
+
+.barberItem {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 10px 20px;
+    cursor: pointer;
+    position: relative
+}
+
+.barberImg {
+    width: 100%;
+    height: 100%;
+}
+
+.barberName {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    top: -40px;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.71);
+}
+
+.helpBookInfo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.71);
+    display: block;
+}
+
+#helpBookInfo {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 450px;
+    margin-top: -225px;
+    margin-left: -265px;
+    background-color: rgba(255, 255, 255, 0.71);
+    display: inline-block;
+}
+
+.selectContent {
+    position: absolute;
+    top: 0px;
+    height: 200px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.44);
+    line-height: 200px;
+    text-align: center;
+    display: none;
+}
+
+#selectContent {
+    font-size: 8em;
+    display: inline-block;
+    height: 100%;
+    line-height: 200px;
+    color: rgb(68, 162, 52);
+}
+
+.barberSwiper, .barberList {
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 545px;
+}
+
+.bookInfoSwiper {
+    width: 100%;
+    height: 100%;
+    display: none;
+    min-height: 545px;
+    padding: 0 20px;
+}
+
+#goBack {
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+    background-color: rgb(60, 141, 188);
+    text-align: right;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    font-size: 14px;
+    padding-right: 5px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.formContent {
+    position: relative;
+    display: inline-block;
+    width: 280px;
+    margin: 0px 10px 0px 0px;
+
+}
+
+.bookstyle {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0px 5px;
+}
+
+.deliever_line {
+    background-color: rgb(212, 213, 213);
+}
+
+.customName {
+    width: 200px;
+}
+
+.customTelPhone {
+    width: 200px;
+}
+
+.serviceContainer, .timeContainer {
+    height: 400px;
+    width: 280px;
+    border: 1px solid rgb(195, 194, 194);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    float: left;
+    margin: 10px 10px 10px 0px;
+}
+
+.submitBtn {
+    width: auto;
+}
+
+#submitBook {
+    width: 100px;
+    background-color: rgb(60, 141, 188);
+    color: rgb(245, 249, 252);
+}
+
+#servicePage, #timePage {
+    border: 0 none;
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+}
+
+.serviceContent {
+    color: #000;
+}
+
+.timeContent {
+    text-align: center;
+}
+
+.serviceTitle {
+    height: 57px;
+}
+
+.serviceTitle {
+    width: 100%;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 15px !important;
+    margin-bottom: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.styleItem span {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 33%;
+    text-align: center;
+}
+
+.deliever_line {
+    margin: 10px 0px 10px 0px !important;
+}
+
+.shadow {
+    height: 2px;
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 33%;
+    text-align: center;
+    position: relative;
+    top: -4px;
+    background: rgb(123, 123, 123);
+}
+
+.readyTitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(0, 0, 0) !important;
+    width: 58px;
+    overflow: hidden;
+    margin-top: 5px;
+    height: 20px;
+}
+
+.tip {
+    height: 20px;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+}
+
+.selectServiceName {
+    font-size: 0.9em;
+    display: inline-block;
+    width: 48%;
+    overflow: hidden;
+    word-spacing: normal;
+    text-overflow: ellipsis;
+}
+
+.serviceTime_fee {
+    font-size: 0.9em;
+    display: inline-block;
+    overflow: hidden;
+    width: 80%;
+}
+
+.services {
+    overflow-y: scroll;
+    font-size: 13px;
+    height: 315px;
+}
+
+.serviceItem {
+    margin-bottom: 10px;
+}
+
+.serviceItem #serviceName {
+    display: inline-block;
+    width: 100%;
+    height: 18px;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.timeTitle {
+    height: 30px;
+}
+
+.book_tip {
+    color: rgb(255, 107, 0);
+}
+
+#time_fee {
+    margin-top: 5px;
+}
+
+#time_fee span {
+    display: inline-block;
+    width: 48%;
+}
+
+#time_fee span:nth-child(2) {
+    text-align: right;
+
+}
+
+.timeTable {
+    width: 100%;
+}
+
+.prev span {
+    color: rgba(95, 95, 95, 0);
+}
+
+.next span {
+    color: rgba(95, 95, 95, 1);
+}
+
+.selected {
+    background-color: rgba(123, 123, 123, 0.22);
+}
+
+.timeTable {
+    width: 100%;
+}
+
+.panel-body
+
+!important
+{
+    padding: 10px
+;
+}
+.timeTable td, .timeTable th {
+    border: 1px solid #ddd !important;
+    font-weight: bold;
+}
+
+.timeTable tr {
+    height: 30px;
+}
+
+.timeTable th {
+    width: 16.6%;
+    text-align: center;
+}
+
+.timeTable td:hover {
+    background-color: rgba(123, 123, 123, 0.22);
+}
+
+.selectService {
+    /*  padding: 5px 5px;
+     border-radius: 1%; */
+    background-color: rgba(47, 47, 47, 0.3);
+}
+
+.select_unable {
+    background-color: rgba(113, 113, 113, 0.28);
+    color: rgb(0, 0, 0);
+}
+
+.unable {
+    background-color: #FFFFFF;
+    color: rgb(191, 188, 188);
+}
+
+.glyphicon-scissors:before {
+    content: "\e226";
+    display: inline-block;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 1);
+    margin: 0px 3px 0px 3px;
+    transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    -moz-transform: rotate(7deg);
+    -webkit-transform: rotate(-31deg);
+    -o-transform: rotate(7deg);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: rgba(25, 147, 147, 0);
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.helpLoading {
+    position: absolute;
+    display: none;
+    z-index: 1111111;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 45, 45, 0.8)
+}
+
+.container1 > div, .container2 > div, .container3 > div {
+    background-color: #FFF9F9 !important;
+}
+
+.spinner {
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.loadingTip {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin: -115px -100px;
+}
+
+.previewResult {
+    position: absolute;
+    z-index: 101;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    display: none;
+    left: 218px;
+}
+
+.result-group {
+    list-style: none;
+    margin: 0;
+    padding: 0 15px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.result-group li {
+    cursor: pointer;
+    margin: 4px 0px
+}
+
+.result-group li:HOVER {
+    background-color: #B4B7BD;
+}
+
+.li-select {
+    background-color: #B4B7BD;
+}
+
+.selected_barber {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.main-footer {
+    width: 100%;
+}
+
+.userInfoContent {
+    position: absolute;
+    background-color: rgb(123, 123, 132);
+    width: 100%;
+    top: 60px;
+    max-height: 100px;
+    overflow: hidden;
+    overflow-y: auto;
+    display: none;
+}
+
+.userInfoContent ul {
+    list-style: none;
+    padding: 5px !important;
+    width: 100%;
+    text-align: center;
+    font-size: small;
+}
+
+.userInfoContent ul > li {
+    background-color: rgb(123, 123, 132);
+}
+
+.userInfo_Name {
+    float: left;
+    margin-left: 10px;
+}
+
+.userInfo_tel {
+
+}
+
+.userInfo_service {
+    float: right;
+    margin-right: 10px;
+    color: darkblue;
+    cursor: pointer;
+}
+
+.userService_Container {
+    position: absolute;
+    display: none;
+    width: 100%;
+    top: 60px;
+    background-color: rgba(133, 202, 230, 0.7);
+    max-height: 100px;
+    min-height: 40px;
+    z-index: 11;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.userService_Container ul {
+    list-style: none;
+    padding: 5px !important;
+    width: 100%;
+    font-size: small;
+}
+
+.userService_Container li {
+    border-bottom: 1px solid rgb(222, 87, 87);
+}
+
+.userService_time {
+    float: left;
+    marign-left: 10px;
+}
+
+.userService_barber {
+    float: right;
+    margin-right: 10px;
+}

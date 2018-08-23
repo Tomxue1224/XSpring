@@ -1,0 +1,24 @@
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53"
+}
+
+.shopInfoContent {
+    width: 600px;
+    position: relative;
+    margin: 0 auto;
+    padding: 20px 100px;
+    border: 2px solid rgb(123, 123, 123);
+    background-color: rgb(243, 243, 243);
+}
+
+.icon-edit {
+    background-image: url(../image/edit.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size: 100% 100%;
+    position: relative;
+    top: 10px;
+    left: 20px;
+}

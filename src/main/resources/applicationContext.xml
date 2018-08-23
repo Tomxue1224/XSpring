@@ -28,11 +28,33 @@
     <!--mvc:annotation-driven 配置用来替换下面两个bean加载配置-->
     <!--<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />-->
     <!--<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />-->
-    <mvc:annotation-driven/>
-    <aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
+    <mvc:annotation-driven>
+        <!--解决返回字符串乱码问题-->
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg value="UTF-8"/>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+    <!--对静态资源文件的访问-->
+    <mvc:resources mapping="/include/**" location="include/"/>
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
 
+
+    <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <property name="order" value="1"/>
+        <property name="defaultViews">
+            <list>
+                <!-- Json视图 -->
+                <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"/>
+            </list>
+        </property>
+
+    </bean>
+
+    <!--视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/views/"/>
+        <property name="prefix" value="/WEB-INF/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 
@@ -50,12 +72,17 @@
         <property name="maxActive" value="${druid.maxActive}"/>
     </bean>
 
-    <!--//SqlSessionFactory配置，注意此处有大坑（如果你使用Intellij这个ide的话请看后面的填坑指南）-->
+    <!--mybatis和Spring整合的SQLSessionFactory缓存-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="mapperLocations" value="classpath:mapper/dao.xml"/>
+        <property name="mapperLocations" value="classpath*:mapper/*.xml"/>
     </bean>
 
+    <!--扫描MyBatis的持久层的接口类文件-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <property name="basePackage" value="x.mapper"/>
+    </bean>
 
     <!-- 被代理对象 xml 配置方式->
     <!-<bean id="math" class="x.service.MathDiy"></bean>-->
@@ -75,7 +102,6 @@
     <!--</aop:aspect>-->
     <!--</aop:config>-->
 
-    <!--用注解的方式来配置aop-->
 
 
 </beans>

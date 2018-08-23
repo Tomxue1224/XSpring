@@ -1,0 +1,79 @@
+.pagebg {
+    position: absolute;
+    background-image: url(../image/pagebg.jpg);
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.shadow {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(123, 123, 123, 0.3);
+}
+
+.loginDiv {
+    position: relative;
+    top: 25%;
+    width: 320px;
+    height: 320px;
+    background-color: rgba(212, 199, 133, 0.32);;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+}
+
+.input-group {
+    margin: 15px;
+}
+
+.input-group-addon {
+    font-size: 12px;
+}
+
+.icon-user, .icon-key {
+    display: inline-block;
+    width: 12px;
+}
+
+.loginTitle {
+    font-size: 34px;
+    padding: 20px 0px;
+}
+
+.butDiv {
+    width: 100;
+    padding: 15px;
+}
+
+.butDiv button {
+    width: 100%;
+    background-color: rgba(123, 123, 123, 0.3);
+}
+
+#myAlert, #captchaAlert {
+    display: none;
+    margin: 0px 15px;
+    padding: 5px;
+}
+
+.inputCaptDiv, .captchaDiv {
+    display: inline-block;
+}
+
+.inputCaptDiv {
+    width: 250px;
+    margin-right: 35px;
+}
+
+#captcha_img, .captchaDiv {
+    height: 46px;
+    cursor: pointer;
+}
+
+#captchaAlert {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 50%;
+}

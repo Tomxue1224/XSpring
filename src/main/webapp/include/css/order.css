@@ -1,0 +1,324 @@
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53"
+}
+
+.bookOrder {
+    width: 250px;
+    display: inline-block;
+    background-color: #3C8DBC;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 0px;
+    margin: 5px;
+    position: relative;
+}
+
+.orderItem, .order_msg {
+    padding: 5px 15px 5px 15px !important;
+}
+
+.qrcode {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    display: none;
+}
+
+.qrcode img {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    margin-top: -100px;
+    left: 50%;
+    margin-left: -100px;
+}
+
+.ok_pay {
+    text-align: center;
+    background-color: #fff;
+    width: 70%;
+    margin-left: 15%;
+    border-radius: 3px;
+    color: #000;
+}
+
+.ok_pay span {
+    cursor: pointer;
+}
+
+.simpleOrderInfo {
+    display: inline-block;
+    height: 45px;
+    width: 80%;
+}
+
+#infoTitle {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.ok_content {
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    width: 140px;
+    overflow: hidden;
+}
+
+hr {
+    margin: 5px 0;
+    border-color: #ECF0F5;
+}
+
+/*---- 签到和修改订单按钮的的样式---- */
+.sign-in, .modifyPrice {
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background-color: rgb(0, 166, 90);
+    border-radius: 4px;
+    float: right;
+    cursor: pointer;
+}
+
+.modifyPrice {
+    background-color: rgb(166, 101, 0);
+}
+
+/*---- 签到和修改订单按钮的的样式---- */
+.redTip, .blueTip, .gayTip {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+
+.red {
+    background-color: #C87524;
+}
+
+.blue {
+    background-color: #3C8DBC;
+}
+
+.gay {
+    background-color: #8B8B8B;
+}
+
+.show {
+    background-color: #ffffff;
+}
+
+.disable {
+    background-color: #C2C2C2;
+    color: rgb(121, 121, 121);
+}
+
+.CashierContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(241, 242, 247);
+    overflow: auto;
+    display: none;
+}
+
+.backOrderList {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 14px !important;
+    display: inline-block;
+    width: 80px;
+    height: 50px;
+    margin: 0 !important;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgb(217, 217, 217);
+    cursor: pointer;
+}
+
+.CashierContent p {
+    margin: 0;
+}
+
+.Cashier-title, .Cashier-order-moreInfo {
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 100px;
+}
+
+.Cashier-title span {
+    font-size: 18px;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-left: 5px;
+    color: rgb(96, 95, 95);
+}
+
+.Cashier-order-info {
+    height: 60px;
+}
+
+.left-order, .right-order {
+    height: 100%
+}
+
+.left-order {
+    float: left;
+    padding: 10px 99px;
+    line-height: 2;
+}
+
+.right-order {
+    position: relative;
+    float: right;
+    right: 200px;
+    line-height: 1;
+    padding: 15px 10px;
+}
+
+.right-order img {
+    height: 85px;
+    position: absolute;
+    top: -25px;
+    right: -100px;
+}
+
+.order-moreInfo {
+    color: rgb(46, 167, 231);
+    bottom: 0;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.up-tip {
+    display: inline-block;
+    width: 0;
+    height: 0px;
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-bottom: 8px solid #2EA7E7;
+    margin-left: 5px;
+}
+
+.down-tip {
+    display: inline-block;
+    width: 0;
+    height: 0px;
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-top: 8px solid #2EA7E7;
+    margin-left: 5px;
+}
+
+.cut-off-rule {
+    background-color: rgb(210, 211, 214);
+    height: 1px;
+    margin: 5px 100px;
+}
+
+.Cashier-order-moreInfo {
+    position: relative;
+    height: 0px;
+    top: 5px;
+    padding: 0px 100px;
+    background-color: rgb(241, 242, 247);
+}
+
+.Carshier-order-payMent {
+    position: relative;
+    border-top: 4px solid #4b5b78;
+    background-color: #fff;
+    padding: 12px 30px 0;
+    margin: 5px 75px;
+}
+
+.Carshier-order-payMent p {
+    margin: 0;
+!important;
+}
+
+.left-order-payment {
+    float: left;
+    margin: 0 100px;
+}
+
+.payQrcodeContainer {
+    padding: 10px;
+    border: 1px solid rgb(165, 165, 165);
+    margin: 20px 0px;
+}
+
+#payQrcode {
+    width: 200px;
+    height: 200px;
+}
+
+.left-foot-order-payment {
+    height: 56px;
+    background-color: rgb(255, 118, 116);
+    padding: 8px 15px;
+}
+
+.left-foot-order-payment img {
+    float: left;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+#cashier-fee {
+    font-size: 18px;
+    vertical-align: bottom;
+    color: #ff5d5b;
+    margin: 0 3px;
+    font-weight: bold;
+}
+
+.cancleOrder {
+    display: inline-block;
+    width: 33px;
+    text-align: center;
+    background-color: #dd4b39;
+    float: right;
+    cursor: pointer;
+}
+
+.alertContent {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.myalert {
+    background-color: rgb(84, 84, 84);
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+    top: -100px;
+    border-radius: 4px;
+}
+
+.myalert button {
+    float: right;
+    margin: 0 10px;
+}
+
+.redNum, .blueNum, .gayNum {
+    margin-left: 5px;
+    margin-right: 5px;
+}

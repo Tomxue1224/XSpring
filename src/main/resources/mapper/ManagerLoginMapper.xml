@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="x.mapper.ManagerLoginMapper">
+    <resultMap id="BaseResultMap" type="x.model.ManagerLoginVo">
+        <id column="managerlogin_id" jdbcType="CHAR" property="managerloginId"/>
+        <result column="managerlogin_tel" jdbcType="CHAR" property="managerloginTel"/>
+        <result column="managerlogin_password" jdbcType="VARCHAR" property="managerloginPassword"/>
+        <result column="managerlogin_token" jdbcType="CHAR" property="managerloginToken"/>
+        <result column="managerlogin_creattime" jdbcType="CHAR" property="managerloginCreattime"/>
+        <result column="managerlogin_alerttime" jdbcType="CHAR" property="managerloginAlerttime"/>
+        <result column="managerlogin_ip" jdbcType="CHAR" property="managerloginIp"/>
+        <result column="managerlogin_shopid" jdbcType="CHAR" property="managerloginShopid"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    managerlogin_id, managerlogin_tel, managerlogin_password, managerlogin_token, managerlogin_creattime, 
+    managerlogin_alerttime, managerlogin_ip, managerlogin_shopid
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from xy_managerlogin
+        where managerlogin_id = #{managerloginId,jdbcType=CHAR}
+    </select>
+
+    <!--按照手机号码和密码查询-->
+    <select id="selectByloginInfo" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM xy_managerlogin
+        WHERE managerlogin_tel = #{arg0,jdbcType=CHAR}
+        AND managerlogin_password = #{arg1,jdbcType=CHAR}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from xy_managerlogin
+    where managerlogin_id = #{managerloginId,jdbcType=CHAR}
+  </delete>
+    <insert id="insert" parameterType="x.model.ManagerLoginVo">
+    insert into xy_managerlogin (managerlogin_id, managerlogin_tel, managerlogin_password, 
+      managerlogin_token, managerlogin_creattime, managerlogin_alerttime, 
+      managerlogin_ip, managerlogin_shopid)
+    values (#{managerloginId,jdbcType=CHAR}, #{managerloginTel,jdbcType=CHAR}, #{managerloginPassword,jdbcType=VARCHAR}, 
+      #{managerloginToken,jdbcType=CHAR}, #{managerloginCreattime,jdbcType=CHAR}, #{managerloginAlerttime,jdbcType=CHAR}, 
+      #{managerloginIp,jdbcType=CHAR}, #{managerloginShopid,jdbcType=CHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="x.model.ManagerLoginVo">
+        insert into xy_managerlogin
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="managerloginId != null">
+                managerlogin_id,
+            </if>
+            <if test="managerloginTel != null">
+                managerlogin_tel,
+            </if>
+            <if test="managerloginPassword != null">
+                managerlogin_password,
+            </if>
+            <if test="managerloginToken != null">
+                managerlogin_token,
+            </if>
+            <if test="managerloginCreattime != null">
+                managerlogin_creattime,
+            </if>
+            <if test="managerloginAlerttime != null">
+                managerlogin_alerttime,
+            </if>
+            <if test="managerloginIp != null">
+                managerlogin_ip,
+            </if>
+            <if test="managerloginShopid != null">
+                managerlogin_shopid,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="managerloginId != null">
+                #{managerloginId,jdbcType=CHAR},
+            </if>
+            <if test="managerloginTel != null">
+                #{managerloginTel,jdbcType=CHAR},
+            </if>
+            <if test="managerloginPassword != null">
+                #{managerloginPassword,jdbcType=VARCHAR},
+            </if>
+            <if test="managerloginToken != null">
+                #{managerloginToken,jdbcType=CHAR},
+            </if>
+            <if test="managerloginCreattime != null">
+                #{managerloginCreattime,jdbcType=CHAR},
+            </if>
+            <if test="managerloginAlerttime != null">
+                #{managerloginAlerttime,jdbcType=CHAR},
+            </if>
+            <if test="managerloginIp != null">
+                #{managerloginIp,jdbcType=CHAR},
+            </if>
+            <if test="managerloginShopid != null">
+                #{managerloginShopid,jdbcType=CHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="x.model.ManagerLoginVo">
+        update xy_managerlogin
+        <set>
+            <if test="managerloginTel != null">
+                managerlogin_tel = #{managerloginTel,jdbcType=CHAR},
+            </if>
+            <if test="managerloginPassword != null">
+                managerlogin_password = #{managerloginPassword,jdbcType=VARCHAR},
+            </if>
+            <if test="managerloginToken != null">
+                managerlogin_token = #{managerloginToken,jdbcType=CHAR},
+            </if>
+            <if test="managerloginCreattime != null">
+                managerlogin_creattime = #{managerloginCreattime,jdbcType=CHAR},
+            </if>
+            <if test="managerloginAlerttime != null">
+                managerlogin_alerttime = #{managerloginAlerttime,jdbcType=CHAR},
+            </if>
+            <if test="managerloginIp != null">
+                managerlogin_ip = #{managerloginIp,jdbcType=CHAR},
+            </if>
+            <if test="managerloginShopid != null">
+                managerlogin_shopid = #{managerloginShopid,jdbcType=CHAR},
+            </if>
+        </set>
+        where managerlogin_id = #{managerloginId,jdbcType=CHAR}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="x.model.ManagerLoginVo">
+    update xy_managerlogin
+    set managerlogin_tel = #{managerloginTel,jdbcType=CHAR},
+      managerlogin_password = #{managerloginPassword,jdbcType=VARCHAR},
+      managerlogin_token = #{managerloginToken,jdbcType=CHAR},
+      managerlogin_creattime = #{managerloginCreattime,jdbcType=CHAR},
+      managerlogin_alerttime = #{managerloginAlerttime,jdbcType=CHAR},
+      managerlogin_ip = #{managerloginIp,jdbcType=CHAR},
+      managerlogin_shopid = #{managerloginShopid,jdbcType=CHAR}
+    where managerlogin_id = #{managerloginId,jdbcType=CHAR}
+  </update>
+
+    <update id="updateManagerLoginip" parameterType="java.lang.String">
+    UPDATE xy_managerlogin
+    SET managerlogin_ip = #{arg0,jdbcType=CHAR}
+    where managerlogin_id = #{arg1,jdbcType=CHAR}
+  </update>
+</mapper>
